@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: todoapp-deployment
- namespace: todoapp
+ namespace: mateapp
 spec:
   strategy:
     type: RollingUpdate
@@ -12,11 +12,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: todoapp
+      app: mateapp
   template:
     metadata:
       labels:
-        app: todoapp
+        app: mateapp
     spec:
       containers:
       - name: todoapp
